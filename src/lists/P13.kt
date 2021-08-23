@@ -1,6 +1,7 @@
 package lists
 
 fun <T> encodeDirect(list: List<T?>): List<Pair<Int, T?>>{
+    if(list.isEmpty()) return emptyList()
     val myList = mutableListOf<Pair<Int, T?>>()
     var element: T? = list[0]
     var count = 1
